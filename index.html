@@ -437,13 +437,13 @@ display:none;align-items:center;justify-content:center;flex-direction:column;gap
 
   <!-- API KEY SETUP -->
 
-  <div class="api-setup" id="apiSetup" style="display:flex">
+  <div class="api-setup" id="apiSetup" style="display:none">
     <label>OpenAI API Key</label>
     <input class="api-input" id="apiInput" type="password" placeholder="sk-proj-..."/>
     <button class="api-save" onclick="saveKey()">Save & Continue</button>
   </div>
 
-  <div class="play-wrap" id="playWrap" style="display:none">
+  <div class="play-wrap" id="playWrap" style="display:flex">
     <div class="play-rings">
       <div class="play-ring1"></div>
       <div class="play-ring2"></div>
@@ -658,7 +658,7 @@ const SOPS = [
 ];
 
 // ── STATE ─────────────────────────────────────────────────────────────────
-let apiKey = localStorage.getItem('ca_openai_key') || '';
+let apiKey = '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';
 let score = 0;
 let lives = 3;
 let stars = 0;
