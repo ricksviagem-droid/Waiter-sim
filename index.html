@@ -764,11 +764,11 @@ function playSound(type){
 // ── API ───────────────────────────────────────────────────────────────────
 function saveKey(){
   const k=document.getElementById('apiInput').value.trim();
-  if(!k.startsWith('sk-')){ toast('Invalid key format'); return; }
+  if(k.length < 10){ toast('Key too short - check and try again'); return; }
   apiKey=k; localStorage.setItem('ca_openai_key',k);
   document.getElementById('apiSetup').style.display='none';
   document.getElementById('playWrap').style.display='flex';
-  toast('Key saved!');
+  toast('Ready!');
 }
 
 async function callAI(prompt){
